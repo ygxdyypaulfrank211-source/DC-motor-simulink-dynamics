@@ -8,7 +8,7 @@
 
 ## 2. 仿真拓扑结构 (风机类非线性负载)
 ![Simulink Model](simulink_model.png)  
-*(注：利用 Math Function 模块构建了 $T_L = k\omega^2$ 的转速负反馈回路)*
+*(注：利用 Math Function 模块构建了 $T_L = k\cdot\omega^2$ 的转速负反馈回路)*
 
 ## 3. 核心实验对比与动力学分析
 实验设置：同一输入电压 $U=24\text{V}$，对比传统恒转矩负载与风机类负载（$k=0.00005$）的动态响应。
