@@ -6,9 +6,14 @@
 
 ## 1. 系统数学方程与拓扑架构
 
-本仿真严格遵循机电传动控制的核心物理方程：
-- 电枢回路方程： $$I_a = \frac{U - E}{R_a}$$ （其中反电动势 $E = K_e \cdot \Phi \cdot \omega$）
-- 动力学运动方程： $$T - T_L = J \frac{\mathrm{d}\omega}{\mathrm{d}t}$$ （其中电磁转矩 $T = K_t \cdot \Phi \cdot I_a$）
+本仿真严格遵循机电传动控制的核心物理方程，并在系统中设置了以下标准仿真参数：
+- **电枢电阻**： $R_a = 1\ \Omega$
+- **转动惯量**： $J = 0.02\ \text{kg}\cdot\text{m}^2$
+- **转矩/反电动势系数**： $K_t\Phi = K_e\Phi = 0.1$
+
+### 核心物理方程：
+- 电枢回路方程： $$I_a = \frac{U - E}{R_a}$$ （其中反电动势 $E = K_e\Phi \cdot \omega$）
+- 动力学运动方程： $$T - T_L = J \frac{\mathrm{d}\omega}{\mathrm{d}t}$$ （其中电磁转矩 $T = K_t\Phi \cdot I_a$）
 
 ### 仿真模型拓扑图
 **（1）恒转矩负载响应模型图**![Simulink1 Model](simulink_model.png)
@@ -20,7 +25,7 @@
 
 ## 2. 核心实验场景与波形对比
 
-实验统一采用恒定输入电压 U = 24V，电枢绕阻$R_a$=1电总仿真时间为 10 秒。
+实验统一采用恒定输入电压 U = 24V，总仿真时间为 10 秒。
 
 ### 场景 A：恒转矩负载响应（传统工业场景）
 ![Simulation Result](simulation_result.png)
